@@ -1,6 +1,6 @@
 # Message Formatting Context
 
-A reusable **message style guide** extracted from `messages_en.properties` for consistent message generation across plugins and tools.
+A reusable **message style guide** for consistent message generation across plugins and tools.
 
 ---
 
@@ -16,7 +16,6 @@ Think of it as a **design system for Minecraft chat messages**.
 
 | File | Description |
 |------|-------------|
-| `messages_en.properties` | Original message file (EssentialsX Vietnamese config by © Earns) |
 | `context.json` | Extracted formatting context — colors, icons, patterns, rules |
 | `readme.md` | This file |
 

@@ -1,7 +1,10 @@
 {
   "formatting_system": {
     "primary_format": "MiniMessage",
-    "supported_formats": ["MiniMessage", "Legacy"],
+    "supported_formats": [
+      "MiniMessage",
+      "Legacy"
+    ],
     "legacy_detected": false,
     "legacy_compatibility": "Legacy fallback codes are inferred (closest visual match) for all colors to support plugins without MiniMessage support",
     "features_used": [
@@ -24,34 +27,94 @@
       "strikethrough": "<st>text</st>"
     },
     "legacy_color_reference": {
-      "&0": { "name": "black", "hex": "#000000" },
-      "&1": { "name": "dark_blue", "hex": "#0000AA" },
-      "&2": { "name": "dark_green", "hex": "#00AA00" },
-      "&3": { "name": "dark_aqua", "hex": "#00AAAA" },
-      "&4": { "name": "dark_red", "hex": "#AA0000" },
-      "&5": { "name": "dark_purple", "hex": "#AA00AA" },
-      "&6": { "name": "gold", "hex": "#FFAA00" },
-      "&7": { "name": "gray", "hex": "#AAAAAA" },
-      "&8": { "name": "dark_gray", "hex": "#555555" },
-      "&9": { "name": "blue", "hex": "#5555FF" },
-      "&a": { "name": "green", "hex": "#55FF55" },
-      "&b": { "name": "aqua", "hex": "#55FFFF" },
-      "&c": { "name": "red", "hex": "#FF5555" },
-      "&d": { "name": "light_purple", "hex": "#FF55FF" },
-      "&e": { "name": "yellow", "hex": "#FFFF55" },
-      "&f": { "name": "white", "hex": "#FFFFFF" },
-      "&l": { "name": "bold" },
-      "&m": { "name": "strikethrough" },
-      "&n": { "name": "underline" },
-      "&o": { "name": "italic" },
-      "&r": { "name": "reset" }
+      "&0": {
+        "name": "black",
+        "hex": "#000000"
+      },
+      "&1": {
+        "name": "dark_blue",
+        "hex": "#0000AA"
+      },
+      "&2": {
+        "name": "dark_green",
+        "hex": "#00AA00"
+      },
+      "&3": {
+        "name": "dark_aqua",
+        "hex": "#00AAAA"
+      },
+      "&4": {
+        "name": "dark_red",
+        "hex": "#AA0000"
+      },
+      "&5": {
+        "name": "dark_purple",
+        "hex": "#AA00AA"
+      },
+      "&6": {
+        "name": "gold",
+        "hex": "#FFAA00"
+      },
+      "&7": {
+        "name": "gray",
+        "hex": "#AAAAAA"
+      },
+      "&8": {
+        "name": "dark_gray",
+        "hex": "#555555"
+      },
+      "&9": {
+        "name": "blue",
+        "hex": "#5555FF"
+      },
+      "&a": {
+        "name": "green",
+        "hex": "#55FF55"
+      },
+      "&b": {
+        "name": "aqua",
+        "hex": "#55FFFF"
+      },
+      "&c": {
+        "name": "red",
+        "hex": "#FF5555"
+      },
+      "&d": {
+        "name": "light_purple",
+        "hex": "#FF55FF"
+      },
+      "&e": {
+        "name": "yellow",
+        "hex": "#FFFF55"
+      },
+      "&f": {
+        "name": "white",
+        "hex": "#FFFFFF"
+      },
+      "&l": {
+        "name": "bold"
+      },
+      "&m": {
+        "name": "strikethrough"
+      },
+      "&n": {
+        "name": "underline"
+      },
+      "&o": {
+        "name": "italic"
+      },
+      "&r": {
+        "name": "reset"
+      }
     }
   },
-
   "color_system": {
     "error_warning": {
       "description": "Used for error messages, warnings, permission denials, and invalid input",
-      "gradient": ["#ff7817", "#ffc46b"],
+      "gradient": [
+        "#ff7817",
+        "#ffc46b"
+      ],
       "minimessage": "<gradient:#ff7817:#ffc46b>message</gradient>",
       "legacy": "&6",
       "legacy_note": "Closest match: gold (&6). Gradient not supported in Legacy; use flat &6 as fallback.",
@@ -200,14 +263,20 @@
     },
     "info_generic": {
       "description": "Used for generic informational messages (like distance, playtime, coords)",
-      "gradient": ["#ffb469", "#ffdb9c"],
+      "gradient": [
+        "#ffb469",
+        "#ffdb9c"
+      ],
       "minimessage": "<gradient:#ffb469:#ffdb9c>message</gradient>",
       "legacy": "&6",
       "legacy_note": "Closest match: gold (&6). Gradient not supported in Legacy."
     },
     "notification_header": {
       "description": "Used for notification block headers (ban, mute, jail, mail notifications)",
-      "gradient": ["#ffbaf4", "#7dfdff"],
+      "gradient": [
+        "#ffbaf4",
+        "#7dfdff"
+      ],
       "minimessage": "<gradient:#ffbaf4:#7dfdff>header text</gradient>",
       "legacy": "&d",
       "legacy_note": "Closest match: light_purple (&d). Gradient not supported in Legacy."
@@ -237,49 +306,332 @@
       "legacy": "&a"
     }
   },
-
   "icons": [
-    { "symbol": "✔", "purpose": "success indicator", "color": "#99ff94", "used_in": ["success messages", "confirmations"] },
-    { "symbol": "✖", "purpose": "failure/disabled indicator", "color": "red", "used_in": ["disabled state", "false values"] },
-    { "symbol": "⛃", "purpose": "money/economy icon", "color": "#ffc885", "used_in": ["balance", "payment messages"] },
-    { "symbol": "⏩", "purpose": "teleport icon", "color": "#52ffc2", "used_in": ["teleportation", "tp requests"] },
-    { "symbol": "⌂", "purpose": "home icon", "color": "#cec2ff", "used_in": ["home set/delete/list"] },
-    { "symbol": "🔱", "purpose": "warp icon", "color": "#15edbe", "used_in": ["warp set/delete"] },
-    { "symbol": "⛏", "purpose": "kit icon", "color": "#ddb51e", "used_in": ["kit receive/create/delete"] },
-    { "symbol": "⚙", "purpose": "system/config icon", "color": "#ffdac4", "used_in": ["system messages", "config operations"] },
-    { "symbol": "₪", "purpose": "discord icon", "color": "#78d2ff", "used_in": ["discord integration messages"] },
-    { "symbol": "🗡", "purpose": "hypermode icon", "color": "#a1ffd1", "used_in": ["god mode", "fly mode", "gamemode"] },
-    { "symbol": "🔥", "purpose": "enchantment icon", "color": "#baa3ff", "used_in": ["enchantment add/remove"] },
-    { "symbol": "🏹", "purpose": "essentialsx plugin icon", "color": "#7dff9b", "used_in": ["plugin messages"] },
-    { "symbol": "✉", "purpose": "mail icon", "color": "#ffd978", "used_in": ["mail system messages"] },
-    { "symbol": "✎", "purpose": "edit/nick/reason icon", "color": "varies", "used_in": ["nickname", "book editing", "reason fields"] },
-    { "symbol": "⌀", "purpose": "jail icon", "color": "#d7d4ff", "used_in": ["jail messages"] },
-    { "symbol": "🗑", "purpose": "inventory/trash icon", "color": "#ffbad3", "used_in": ["inventory clear messages"] },
-    { "symbol": "⬤", "purpose": "exp/xp icon", "color": "#00ffbb", "used_in": ["experience messages"] },
-    { "symbol": "☠", "purpose": "death/back icon", "color": "#fff48c", "used_in": ["back after death messages"] },
-    { "symbol": "⚡", "purpose": "lightning icon", "color": "#ffff6b", "used_in": ["lightning strike messages"] },
-    { "symbol": "❖", "purpose": "powertool icon", "color": "#b7ff42", "used_in": ["powertool messages"] },
-    { "symbol": "🎁", "purpose": "give/item icon", "color": "#ffd4ea", "used_in": ["give item messages"] },
-    { "symbol": "☀", "purpose": "world icon", "color": "#a1ffe1", "used_in": ["world info messages"] },
-    { "symbol": "🌊", "purpose": "sea/depth icon", "color": "#6bcbff", "used_in": ["depth/sea level messages"] },
-    { "symbol": "☔", "purpose": "weather icon", "color": "#70f1ff", "used_in": ["player weather messages"] },
-    { "symbol": "⌚", "purpose": "time icon", "color": "#f8ffd6", "used_in": ["player time messages", "playtime"] },
-    { "symbol": "🔔", "purpose": "mute/notification icon", "color": "#ffe070", "used_in": ["mute messages", "ignore list"] },
-    { "symbol": "☎", "purpose": "inbox icon", "color": "#91ffde", "used_in": ["private messaging toggle/ignore"] },
-    { "symbol": "👤", "purpose": "player/msg icon", "color": "#a6ffcb", "used_in": ["msg toggle messages"] },
-    { "symbol": "↻", "purpose": "reload icon", "color": "#ffe3e4", "used_in": ["essentials reload"] },
-    { "symbol": "♥", "purpose": "book icon", "color": "#ffb2a1", "used_in": ["book editing messages"] },
-    { "symbol": "♺", "purpose": "sell icon", "color": "#ffe3a6", "used_in": ["sell item messages"] },
-    { "symbol": "⇄", "purpose": "recipe icon", "color": "#e8c4ff", "used_in": ["crafting recipe messages"] },
-    { "symbol": "🎫", "purpose": "hypercore/server icon", "color": "#ffdca1", "used_in": ["server unsupported warnings", "spawner"] },
-    { "symbol": "⌨", "purpose": "edit sign icon", "color": "#4affab", "used_in": ["sign editing messages"] },
-    { "symbol": "⚒", "purpose": "shout mode icon", "color": "#9ec3ff", "used_in": ["shout mode toggle"] },
-    { "symbol": "◆", "purpose": "tool/durability icon", "color": "#fcff9c", "used_in": ["tool durability messages"] },
-    { "symbol": "⟳", "purpose": "backup icon", "color": "#19ffc2", "used_in": ["backup messages"] },
-    { "symbol": "⛁", "purpose": "server total icon", "color": "#adffbf", "used_in": ["server total balance"] },
-    { "symbol": "▪", "purpose": "separator dot", "color": "dark_gray", "used_in": ["prefix-to-content separator in all messages"] }
+    {
+      "symbol": "✔",
+      "purpose": "success indicator",
+      "color": "#99ff94",
+      "used_in": [
+        "success messages",
+        "confirmations"
+      ]
+    },
+    {
+      "symbol": "✖",
+      "purpose": "failure/disabled indicator",
+      "color": "red",
+      "used_in": [
+        "disabled state",
+        "false values"
+      ]
+    },
+    {
+      "symbol": "⛃",
+      "purpose": "money/economy icon",
+      "color": "#ffc885",
+      "used_in": [
+        "balance",
+        "payment messages"
+      ]
+    },
+    {
+      "symbol": "⏩",
+      "purpose": "teleport icon",
+      "color": "#52ffc2",
+      "used_in": [
+        "teleportation",
+        "tp requests"
+      ]
+    },
+    {
+      "symbol": "⌂",
+      "purpose": "home icon",
+      "color": "#cec2ff",
+      "used_in": [
+        "home set/delete/list"
+      ]
+    },
+    {
+      "symbol": "🔱",
+      "purpose": "warp icon",
+      "color": "#15edbe",
+      "used_in": [
+        "warp set/delete"
+      ]
+    },
+    {
+      "symbol": "⛏",
+      "purpose": "kit icon",
+      "color": "#ddb51e",
+      "used_in": [
+        "kit receive/create/delete"
+      ]
+    },
+    {
+      "symbol": "⚙",
+      "purpose": "system/config icon",
+      "color": "#ffdac4",
+      "used_in": [
+        "system messages",
+        "config operations"
+      ]
+    },
+    {
+      "symbol": "₪",
+      "purpose": "discord icon",
+      "color": "#78d2ff",
+      "used_in": [
+        "discord integration messages"
+      ]
+    },
+    {
+      "symbol": "🗡",
+      "purpose": "hypermode icon",
+      "color": "#a1ffd1",
+      "used_in": [
+        "god mode",
+        "fly mode",
+        "gamemode"
+      ]
+    },
+    {
+      "symbol": "🔥",
+      "purpose": "enchantment icon",
+      "color": "#baa3ff",
+      "used_in": [
+        "enchantment add/remove"
+      ]
+    },
+    {
+      "symbol": "🏹",
+      "purpose": "essentialsx plugin icon",
+      "color": "#7dff9b",
+      "used_in": [
+        "plugin messages"
+      ]
+    },
+    {
+      "symbol": "✉",
+      "purpose": "mail icon",
+      "color": "#ffd978",
+      "used_in": [
+        "mail system messages"
+      ]
+    },
+    {
+      "symbol": "✎",
+      "purpose": "edit/nick/reason icon",
+      "color": "varies",
+      "used_in": [
+        "nickname",
+        "book editing",
+        "reason fields"
+      ]
+    },
+    {
+      "symbol": "⌀",
+      "purpose": "jail icon",
+      "color": "#d7d4ff",
+      "used_in": [
+        "jail messages"
+      ]
+    },
+    {
+      "symbol": "🗑",
+      "purpose": "inventory/trash icon",
+      "color": "#ffbad3",
+      "used_in": [
+        "inventory clear messages"
+      ]
+    },
+    {
+      "symbol": "⬤",
+      "purpose": "exp/xp icon",
+      "color": "#00ffbb",
+      "used_in": [
+        "experience messages"
+      ]
+    },
+    {
+      "symbol": "☠",
+      "purpose": "death/back icon",
+      "color": "#fff48c",
+      "used_in": [
+        "back after death messages"
+      ]
+    },
+    {
+      "symbol": "⚡",
+      "purpose": "lightning icon",
+      "color": "#ffff6b",
+      "used_in": [
+        "lightning strike messages"
+      ]
+    },
+    {
+      "symbol": "❖",
+      "purpose": "powertool icon",
+      "color": "#b7ff42",
+      "used_in": [
+        "powertool messages"
+      ]
+    },
+    {
+      "symbol": "🎁",
+      "purpose": "give/item icon",
+      "color": "#ffd4ea",
+      "used_in": [
+        "give item messages"
+      ]
+    },
+    {
+      "symbol": "☀",
+      "purpose": "world icon",
+      "color": "#a1ffe1",
+      "used_in": [
+        "world info messages"
+      ]
+    },
+    {
+      "symbol": "🌊",
+      "purpose": "sea/depth icon",
+      "color": "#6bcbff",
+      "used_in": [
+        "depth/sea level messages"
+      ]
+    },
+    {
+      "symbol": "☔",
+      "purpose": "weather icon",
+      "color": "#70f1ff",
+      "used_in": [
+        "player weather messages"
+      ]
+    },
+    {
+      "symbol": "⌚",
+      "purpose": "time icon",
+      "color": "#f8ffd6",
+      "used_in": [
+        "player time messages",
+        "playtime"
+      ]
+    },
+    {
+      "symbol": "🔔",
+      "purpose": "mute/notification icon",
+      "color": "#ffe070",
+      "used_in": [
+        "mute messages",
+        "ignore list"
+      ]
+    },
+    {
+      "symbol": "☎",
+      "purpose": "inbox icon",
+      "color": "#91ffde",
+      "used_in": [
+        "private messaging toggle/ignore"
+      ]
+    },
+    {
+      "symbol": "👤",
+      "purpose": "player/msg icon",
+      "color": "#a6ffcb",
+      "used_in": [
+        "msg toggle messages"
+      ]
+    },
+    {
+      "symbol": "↻",
+      "purpose": "reload icon",
+      "color": "#ffe3e4",
+      "used_in": [
+        "essentials reload"
+      ]
+    },
+    {
+      "symbol": "♥",
+      "purpose": "book icon",
+      "color": "#ffb2a1",
+      "used_in": [
+        "book editing messages"
+      ]
+    },
+    {
+      "symbol": "♺",
+      "purpose": "sell icon",
+      "color": "#ffe3a6",
+      "used_in": [
+        "sell item messages"
+      ]
+    },
+    {
+      "symbol": "⇄",
+      "purpose": "recipe icon",
+      "color": "#e8c4ff",
+      "used_in": [
+        "crafting recipe messages"
+      ]
+    },
+    {
+      "symbol": "🎫",
+      "purpose": "hypercore/server icon",
+      "color": "#ffdca1",
+      "used_in": [
+        "server unsupported warnings",
+        "spawner"
+      ]
+    },
+    {
+      "symbol": "⌨",
+      "purpose": "edit sign icon",
+      "color": "#4affab",
+      "used_in": [
+        "sign editing messages"
+      ]
+    },
+    {
+      "symbol": "⚒",
+      "purpose": "shout mode icon",
+      "color": "#9ec3ff",
+      "used_in": [
+        "shout mode toggle"
+      ]
+    },
+    {
+      "symbol": "◆",
+      "purpose": "tool/durability icon",
+      "color": "#fcff9c",
+      "used_in": [
+        "tool durability messages"
+      ]
+    },
+    {
+      "symbol": "⟳",
+      "purpose": "backup icon",
+      "color": "#19ffc2",
+      "used_in": [
+        "backup messages"
+      ]
+    },
+    {
+      "symbol": "⛁",
+      "purpose": "server total icon",
+      "color": "#adffbf",
+      "used_in": [
+        "server total balance"
+      ]
+    },
+    {
+      "symbol": "▪",
+      "purpose": "separator dot",
+      "color": "dark_gray",
+      "used_in": [
+        "prefix-to-content separator in all messages"
+      ]
+    }
   ],
-
   "prefix_patterns": [
     {
       "style": "icon_label_separator",
@@ -311,7 +663,6 @@
       ]
     }
   ],
-
   "layout_patterns": [
     {
       "name": "standard_message",
@@ -376,7 +727,6 @@
       "format": "<gradient:#fff2ed:#adffbf><st>────</st></gradient> <color:#adffbf>TITLE</color> <st>─</st> <white>ᴛʀᴀɴɢ <color:#adffbf>{0}</color><white>/<color:#adffbf>{1}</color> <gradient:#adffbf:#fff2ed><st>────</st></gradient>"
     }
   ],
-
   "formatting_rules": {
     "text_style": {
       "description": "All text uses Unicode small caps (ᴀʙᴄᴅᴇғ...) instead of regular characters",
@@ -418,12 +768,30 @@
     },
     "gradient_usage": {
       "description": "Gradients are used for: errors, info brackets, headers, and decorative text",
-      "error_gradient": ["#ff7817", "#ffc46b"],
-      "info_gradient": ["#ffb469", "#ffdb9c"],
-      "notification_gradient": ["#ffbaf4", "#7dfdff"],
-      "positive_gradient": ["#adffbf", "#fff2ed"],
-      "alert_gradient": ["#29ff30", "#73fff6"],
-      "server_name_gradient": ["#b4d6d5", "#f9ecd6"]
+      "error_gradient": [
+        "#ff7817",
+        "#ffc46b"
+      ],
+      "info_gradient": [
+        "#ffb469",
+        "#ffdb9c"
+      ],
+      "notification_gradient": [
+        "#ffbaf4",
+        "#7dfdff"
+      ],
+      "positive_gradient": [
+        "#adffbf",
+        "#fff2ed"
+      ],
+      "alert_gradient": [
+        "#29ff30",
+        "#73fff6"
+      ],
+      "server_name_gradient": [
+        "#b4d6d5",
+        "#f9ecd6"
+      ]
     },
     "bold_usage": {
       "description": "Bold is used sparingly, mainly in section titles within GC output",
@@ -434,13 +802,12 @@
       "example": "<st>──────</st>"
     }
   },
-
   "style_guidelines": {
     "visual_style": "modern, icon-based, gradient-accented",
     "overall_aesthetic": "Premium Minecraft server config with pastel color palette, Unicode small caps, and rich iconography",
     "tone": "system/neutral with decorative flair",
     "verbosity": "short and concise for inline messages, descriptive for notification blocks",
-    "language": "Vietnamese (ᴜɴɪᴄᴏᴅᴇ sᴍᴀʟʟ ᴄᴀᴘs)",
+    "language": "In Your Optional Language (ᴜɴɪᴄᴏᴅᴇ sᴍᴀʟʟ ᴄᴀᴘs)",
     "design_principles": [
       "Every functional category has a unique icon + color pair",
       "Consistent prefix pattern: ICON LABEL ▪ across all modules",

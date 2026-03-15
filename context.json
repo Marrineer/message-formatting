@@ -1,0 +1,464 @@
+{
+  "formatting_system": {
+    "primary_format": "MiniMessage",
+    "supported_formats": ["MiniMessage", "Legacy"],
+    "legacy_detected": false,
+    "legacy_compatibility": "Legacy fallback codes are inferred (closest visual match) for all colors to support plugins without MiniMessage support",
+    "features_used": [
+      "color",
+      "gradient",
+      "hover:show_text",
+      "click:run_command",
+      "click:open_url",
+      "bold",
+      "strikethrough",
+      "reset"
+    ],
+    "examples": {
+      "color_tag": "<color:#ffc885>text</color>",
+      "named_color": "<white>text",
+      "gradient": "<gradient:#ff7817:#ffc46b>text</gradient>",
+      "hover": "<hover:show_text:'tooltip'>text",
+      "click": "<click:run_command:'/command'>text",
+      "bold": "<b>text</b>",
+      "strikethrough": "<st>text</st>"
+    },
+    "legacy_color_reference": {
+      "&0": { "name": "black", "hex": "#000000" },
+      "&1": { "name": "dark_blue", "hex": "#0000AA" },
+      "&2": { "name": "dark_green", "hex": "#00AA00" },
+      "&3": { "name": "dark_aqua", "hex": "#00AAAA" },
+      "&4": { "name": "dark_red", "hex": "#AA0000" },
+      "&5": { "name": "dark_purple", "hex": "#AA00AA" },
+      "&6": { "name": "gold", "hex": "#FFAA00" },
+      "&7": { "name": "gray", "hex": "#AAAAAA" },
+      "&8": { "name": "dark_gray", "hex": "#555555" },
+      "&9": { "name": "blue", "hex": "#5555FF" },
+      "&a": { "name": "green", "hex": "#55FF55" },
+      "&b": { "name": "aqua", "hex": "#55FFFF" },
+      "&c": { "name": "red", "hex": "#FF5555" },
+      "&d": { "name": "light_purple", "hex": "#FF55FF" },
+      "&e": { "name": "yellow", "hex": "#FFFF55" },
+      "&f": { "name": "white", "hex": "#FFFFFF" },
+      "&l": { "name": "bold" },
+      "&m": { "name": "strikethrough" },
+      "&n": { "name": "underline" },
+      "&o": { "name": "italic" },
+      "&r": { "name": "reset" }
+    }
+  },
+
+  "color_system": {
+    "error_warning": {
+      "description": "Used for error messages, warnings, permission denials, and invalid input",
+      "gradient": ["#ff7817", "#ffc46b"],
+      "minimessage": "<gradient:#ff7817:#ffc46b>message</gradient>",
+      "legacy": "&6",
+      "legacy_note": "Closest match: gold (&6). Gradient not supported in Legacy; use flat &6 as fallback.",
+      "usage": "All error/warning messages are wrapped in this orange-to-gold gradient"
+    },
+    "success": {
+      "description": "Used for success confirmations, positive outcomes",
+      "hex": "#99ff94",
+      "minimessage": "<color:#99ff94>",
+      "legacy": "&a",
+      "icon": "✔",
+      "usage": "Success icon and highlighted values in success messages"
+    },
+    "enabled_state": {
+      "description": "Used to indicate something is enabled/activated",
+      "hex": "#99ff94",
+      "minimessage": "<color:#99ff94>",
+      "legacy": "&a",
+      "text_example": "ʙậᴛ / ᴋíᴄʜ ʜᴏạᴛ / ᴄʜấᴘ ɴʜậɴ"
+    },
+    "disabled_state": {
+      "description": "Used to indicate something is disabled/deactivated",
+      "hex": "#ff7817",
+      "minimessage": "<color:#ff7817>",
+      "legacy": "&6",
+      "text_example": "ᴛắᴛ / ᴠô ʜɪệᴜ ʜᴏá / ᴋʜôɴɢ"
+    },
+    "body_text": {
+      "description": "Primary body text color for all messages",
+      "hex": "#FFFFFF",
+      "named_color": "white",
+      "minimessage": "<white>",
+      "legacy": "&f"
+    },
+    "separator": {
+      "description": "Used for the ▪ separator between prefix and content",
+      "hex": "#555555",
+      "named_color": "dark_gray",
+      "minimessage": "<dark_gray>",
+      "legacy": "&8"
+    },
+    "money": {
+      "description": "Used for money/economy related messages and values",
+      "hex": "#ffc885",
+      "minimessage": "<color:#ffc885>",
+      "legacy": "&6",
+      "icon": "⛃"
+    },
+    "teleport": {
+      "description": "Used for teleport related messages and values",
+      "hex": "#52ffc2",
+      "minimessage": "<color:#52ffc2>",
+      "legacy": "&b",
+      "icon": "⏩"
+    },
+    "home": {
+      "description": "Used for home related messages and values",
+      "hex": "#cec2ff",
+      "minimessage": "<color:#cec2ff>",
+      "legacy": "&d",
+      "icon": "⌂"
+    },
+    "warp": {
+      "description": "Used for warp related messages and values",
+      "hex": "#15edbe",
+      "minimessage": "<color:#15edbe>",
+      "legacy": "&b",
+      "icon": "🔱"
+    },
+    "kit": {
+      "description": "Used for kit related messages and values",
+      "hex": "#ddb51e",
+      "minimessage": "<color:#ddb51e>",
+      "legacy": "&6",
+      "icon": "⛏"
+    },
+    "system": {
+      "description": "Used for system/admin messages",
+      "hex": "#ffdac4",
+      "minimessage": "<color:#ffdac4>",
+      "legacy": "&f",
+      "icon": "⚙"
+    },
+    "discord": {
+      "description": "Used for Discord integration messages",
+      "hex": "#78d2ff",
+      "minimessage": "<color:#78d2ff>",
+      "legacy": "&b",
+      "icon": "₪"
+    },
+    "hypermode": {
+      "description": "Used for god mode, fly mode, gamemode messages",
+      "hex": "#a1ffd1",
+      "minimessage": "<color:#a1ffd1>",
+      "legacy": "&a",
+      "icon": "🗡"
+    },
+    "enchant": {
+      "description": "Used for enchantment related messages",
+      "hex": "#baa3ff",
+      "minimessage": "<color:#baa3ff>",
+      "legacy": "&d",
+      "icon": "🔥"
+    },
+    "essentialsx": {
+      "description": "Used for EssentialsX plugin messages",
+      "hex": "#7dff9b",
+      "minimessage": "<color:#7dff9b>",
+      "legacy": "&a",
+      "icon": "🏹"
+    },
+    "mail": {
+      "description": "Used for mail system messages",
+      "hex": "#ffd978",
+      "minimessage": "<color:#ffd978>",
+      "legacy": "&e",
+      "icon": "✉"
+    },
+    "nick": {
+      "description": "Used for nickname related messages",
+      "hex": "#00ffc3",
+      "minimessage": "<color:#00ffc3>",
+      "legacy": "&b",
+      "icon": "✎"
+    },
+    "jail": {
+      "description": "Used for jail related messages",
+      "hex": "#d7d4ff",
+      "minimessage": "<color:#d7d4ff>",
+      "legacy": "&d",
+      "icon": "⌀"
+    },
+    "inventory": {
+      "description": "Used for inventory/clearinventory messages",
+      "hex": "#ffbad3",
+      "minimessage": "<color:#ffbad3>",
+      "legacy": "&d",
+      "icon": "🗑"
+    },
+    "exp": {
+      "description": "Used for experience related messages",
+      "hex": "#00ffbb",
+      "minimessage": "<color:#00ffbb>",
+      "legacy": "&b",
+      "icon": "⬤"
+    },
+    "info_generic": {
+      "description": "Used for generic informational messages (like distance, playtime, coords)",
+      "gradient": ["#ffb469", "#ffdb9c"],
+      "minimessage": "<gradient:#ffb469:#ffdb9c>message</gradient>",
+      "legacy": "&6",
+      "legacy_note": "Closest match: gold (&6). Gradient not supported in Legacy."
+    },
+    "notification_header": {
+      "description": "Used for notification block headers (ban, mute, jail, mail notifications)",
+      "gradient": ["#ffbaf4", "#7dfdff"],
+      "minimessage": "<gradient:#ffbaf4:#7dfdff>header text</gradient>",
+      "legacy": "&d",
+      "legacy_note": "Closest match: light_purple (&d). Gradient not supported in Legacy."
+    },
+    "notification_detail_player": {
+      "description": "Used for player field in notification blocks",
+      "hex": "#e2d1ff",
+      "minimessage": "<color:#e2d1ff>",
+      "legacy": "&d"
+    },
+    "notification_detail_action": {
+      "description": "Used for action/by field in notification blocks",
+      "hex": "#bcffa3",
+      "minimessage": "<color:#bcffa3>",
+      "legacy": "&a"
+    },
+    "notification_detail_reason": {
+      "description": "Used for reason field in notification blocks",
+      "hex": "#faffbf",
+      "minimessage": "<color:#faffbf>",
+      "legacy": "&e"
+    },
+    "notification_detail_type": {
+      "description": "Used for type field in notification blocks",
+      "hex": "#e2ffc7",
+      "minimessage": "<color:#e2ffc7>",
+      "legacy": "&a"
+    }
+  },
+
+  "icons": [
+    { "symbol": "✔", "purpose": "success indicator", "color": "#99ff94", "used_in": ["success messages", "confirmations"] },
+    { "symbol": "✖", "purpose": "failure/disabled indicator", "color": "red", "used_in": ["disabled state", "false values"] },
+    { "symbol": "⛃", "purpose": "money/economy icon", "color": "#ffc885", "used_in": ["balance", "payment messages"] },
+    { "symbol": "⏩", "purpose": "teleport icon", "color": "#52ffc2", "used_in": ["teleportation", "tp requests"] },
+    { "symbol": "⌂", "purpose": "home icon", "color": "#cec2ff", "used_in": ["home set/delete/list"] },
+    { "symbol": "🔱", "purpose": "warp icon", "color": "#15edbe", "used_in": ["warp set/delete"] },
+    { "symbol": "⛏", "purpose": "kit icon", "color": "#ddb51e", "used_in": ["kit receive/create/delete"] },
+    { "symbol": "⚙", "purpose": "system/config icon", "color": "#ffdac4", "used_in": ["system messages", "config operations"] },
+    { "symbol": "₪", "purpose": "discord icon", "color": "#78d2ff", "used_in": ["discord integration messages"] },
+    { "symbol": "🗡", "purpose": "hypermode icon", "color": "#a1ffd1", "used_in": ["god mode", "fly mode", "gamemode"] },
+    { "symbol": "🔥", "purpose": "enchantment icon", "color": "#baa3ff", "used_in": ["enchantment add/remove"] },
+    { "symbol": "🏹", "purpose": "essentialsx plugin icon", "color": "#7dff9b", "used_in": ["plugin messages"] },
+    { "symbol": "✉", "purpose": "mail icon", "color": "#ffd978", "used_in": ["mail system messages"] },
+    { "symbol": "✎", "purpose": "edit/nick/reason icon", "color": "varies", "used_in": ["nickname", "book editing", "reason fields"] },
+    { "symbol": "⌀", "purpose": "jail icon", "color": "#d7d4ff", "used_in": ["jail messages"] },
+    { "symbol": "🗑", "purpose": "inventory/trash icon", "color": "#ffbad3", "used_in": ["inventory clear messages"] },
+    { "symbol": "⬤", "purpose": "exp/xp icon", "color": "#00ffbb", "used_in": ["experience messages"] },
+    { "symbol": "☠", "purpose": "death/back icon", "color": "#fff48c", "used_in": ["back after death messages"] },
+    { "symbol": "⚡", "purpose": "lightning icon", "color": "#ffff6b", "used_in": ["lightning strike messages"] },
+    { "symbol": "❖", "purpose": "powertool icon", "color": "#b7ff42", "used_in": ["powertool messages"] },
+    { "symbol": "🎁", "purpose": "give/item icon", "color": "#ffd4ea", "used_in": ["give item messages"] },
+    { "symbol": "☀", "purpose": "world icon", "color": "#a1ffe1", "used_in": ["world info messages"] },
+    { "symbol": "🌊", "purpose": "sea/depth icon", "color": "#6bcbff", "used_in": ["depth/sea level messages"] },
+    { "symbol": "☔", "purpose": "weather icon", "color": "#70f1ff", "used_in": ["player weather messages"] },
+    { "symbol": "⌚", "purpose": "time icon", "color": "#f8ffd6", "used_in": ["player time messages", "playtime"] },
+    { "symbol": "🔔", "purpose": "mute/notification icon", "color": "#ffe070", "used_in": ["mute messages", "ignore list"] },
+    { "symbol": "☎", "purpose": "inbox icon", "color": "#91ffde", "used_in": ["private messaging toggle/ignore"] },
+    { "symbol": "👤", "purpose": "player/msg icon", "color": "#a6ffcb", "used_in": ["msg toggle messages"] },
+    { "symbol": "↻", "purpose": "reload icon", "color": "#ffe3e4", "used_in": ["essentials reload"] },
+    { "symbol": "♥", "purpose": "book icon", "color": "#ffb2a1", "used_in": ["book editing messages"] },
+    { "symbol": "♺", "purpose": "sell icon", "color": "#ffe3a6", "used_in": ["sell item messages"] },
+    { "symbol": "⇄", "purpose": "recipe icon", "color": "#e8c4ff", "used_in": ["crafting recipe messages"] },
+    { "symbol": "🎫", "purpose": "hypercore/server icon", "color": "#ffdca1", "used_in": ["server unsupported warnings", "spawner"] },
+    { "symbol": "⌨", "purpose": "edit sign icon", "color": "#4affab", "used_in": ["sign editing messages"] },
+    { "symbol": "⚒", "purpose": "shout mode icon", "color": "#9ec3ff", "used_in": ["shout mode toggle"] },
+    { "symbol": "◆", "purpose": "tool/durability icon", "color": "#fcff9c", "used_in": ["tool durability messages"] },
+    { "symbol": "⟳", "purpose": "backup icon", "color": "#19ffc2", "used_in": ["backup messages"] },
+    { "symbol": "⛁", "purpose": "server total icon", "color": "#adffbf", "used_in": ["server total balance"] },
+    { "symbol": "▪", "purpose": "separator dot", "color": "dark_gray", "used_in": ["prefix-to-content separator in all messages"] }
+  ],
+
+  "prefix_patterns": [
+    {
+      "style": "icon_label_separator",
+      "description": "Primary prefix pattern: colored icon + white uppercase label + dark_gray separator",
+      "format": "<color:ICON_COLOR>ICON</color> <white>LABEL <dark_gray>▪ <white>message",
+      "examples": [
+        "<color:#ffc885>⛃</color> <white>ᴍᴏɴᴇʏ <dark_gray>▪",
+        "<color:#52ffc2>⏩</color> <white>ᴅịᴄʜ ᴄʜᴜʏểɴ <dark_gray>▪",
+        "<color:#cec2ff>⌂</color> <white>ʜᴏᴍᴇ <dark_gray>▪",
+        "<color:#99ff94>✔</color> <white>ᴛʜàɴʜ ᴄôɴɢ <dark_gray>▪"
+      ]
+    },
+    {
+      "style": "gradient_bracket",
+      "description": "Gradient bracketed prefix for informational/generic messages",
+      "format": "<gradient:#COLOR1:#COLOR2>[ICON TEXT]</gradient>",
+      "examples": [
+        "<gradient:#ffb469:#ffdb9c>[⌚ ᴛʜờɪ ɢɪᴀɴ đã ᴄʜơɪ {0}]</gradient>",
+        "<gradient:#ffb469:#ffdb9c>[⚐ ᴋʜᴏảɴɢ ᴄáᴄʜ {0}]</gradient>",
+        "<gradient:#adffbf:#fff2ed>[👥 ᴛʜôɴɢ ʙáᴏ]</gradient>"
+      ]
+    },
+    {
+      "style": "gradient_error",
+      "description": "Full gradient wrap for error and warning messages (no icon prefix)",
+      "format": "<gradient:#ff7817:#ffc46b>error message text.</gradient>",
+      "examples": [
+        "<gradient:#ff7817:#ffc46b>ʙạɴ ᴋʜôɴɢ ᴄó qᴜʏềɴ để ᴅùɴɢ ʟệɴʜ ɴàʏ.</gradient>"
+      ]
+    }
+  ],
+
+  "layout_patterns": [
+    {
+      "name": "standard_message",
+      "description": "Most common layout: icon + label + separator + message body",
+      "structure": "ICON LABEL ▪ message text",
+      "format": "<color:X>ICON</color> <white>LABEL <dark_gray>▪ <white>message text",
+      "usage": "Used for 80%+ of all functional messages"
+    },
+    {
+      "name": "success_message",
+      "description": "Success messages use the ✔ icon with 'ᴛʜàɴʜ ᴄôɴɢ' (success) label",
+      "structure": "✔ ᴛʜàɴʜ ᴄôɴɢ ▪ message text",
+      "format": "<color:#99ff94>✔</color> <white>ᴛʜàɴʜ ᴄôɴɢ <dark_gray>▪ <white>message text"
+    },
+    {
+      "name": "error_message",
+      "description": "Error messages use a full gradient wrap with no icon prefix",
+      "structure": "gradient-wrapped error text",
+      "format": "<gradient:#ff7817:#ffc46b>error text</gradient>"
+    },
+    {
+      "name": "error_with_icon",
+      "description": "Named error format with ✖ icon",
+      "structure": "✖ ʟỗɪ ▪ message text",
+      "format": "<color:#ff7817>✖ ʟỗɪ <dark_gray>▪ <gradient:#ff7817:#ffc46b>{0}</gradient>"
+    },
+    {
+      "name": "notification_block",
+      "description": "Multi-line notification blocks for important events (ban, mute, jail, mail)",
+      "structure": "\\n gradient_header \\n\\n  type_line \\n   detail_lines \\n",
+      "format": "\\n<gradient:#ffbaf4:#7dfdff>HEADER</gradient>\\n\\n  <white>ʟᴏạɪ: <color:#e2ffc7>ICON TYPE</color>\\n   <color:#e2d1ff>ICON </color><white>FIELD: <color:#e2d1ff>VALUE</color>\\n",
+      "field_colors": {
+        "type": "#e2ffc7",
+        "player": "#e2d1ff",
+        "action_by": "#bcffa3",
+        "reason": "#faffbf",
+        "expiry": "#bcffa3"
+      },
+      "field_icons": {
+        "player": "👤",
+        "action_by": "🪓",
+        "reason": "✎",
+        "expiry": "⌛",
+        "info": "ℹ"
+      }
+    },
+    {
+      "name": "list_display",
+      "description": "Lists use the category icon + label + colon, then items on next line with ▪ separator",
+      "structure": "ICON LABEL: \\n ▪ [items]",
+      "format": "<color:X>ICON</color> <white>LABEL: \\n <dark_gray>▪ <color:X>[{0}]</color>"
+    },
+    {
+      "name": "hover_click_interactive",
+      "description": "Interactive messages with hover tooltips and click actions",
+      "structure": "<hover><click>visible text</click></hover>",
+      "tooltip_format": "<color:#fff48c>ℹ</color> <white>ᴍô ᴛả\\n <color:#fff48c>ᴄʟɪᴄᴋ</color><white> để ACTION"
+    },
+    {
+      "name": "page_separator",
+      "description": "Page headers use gradient strikethrough separators",
+      "format": "<gradient:#fff2ed:#adffbf><st>────</st></gradient> <color:#adffbf>TITLE</color> <st>─</st> <white>ᴛʀᴀɴɢ <color:#adffbf>{0}</color><white>/<color:#adffbf>{1}</color> <gradient:#adffbf:#fff2ed><st>────</st></gradient>"
+    }
+  ],
+
+  "formatting_rules": {
+    "text_style": {
+      "description": "All text uses Unicode small caps (ᴀʙᴄᴅᴇғ...) instead of regular characters",
+      "applies_to": "All visible player-facing text content",
+      "example": "ᴛʜàɴʜ ᴄôɴɢ instead of THÀNH CÔNG"
+    },
+    "separator_character": {
+      "character": "▪",
+      "color": "dark_gray",
+      "usage": "Always placed between the label and the message content with spaces"
+    },
+    "highlight_variables": {
+      "description": "Variable/dynamic values are highlighted using the category's accent color",
+      "format": "<color:ACCENT>{variable}</color>",
+      "example": "message text <color:#ffc885>{0}</color><white> rest of message"
+    },
+    "color_reset": {
+      "description": "After colored variables, white is re-applied for continuing text",
+      "format": "<color:X>{0}</color><white>continuing text"
+    },
+    "error_pattern": {
+      "description": "All errors and warnings use the same gradient without icons",
+      "gradient": "<gradient:#ff7817:#ffc46b>",
+      "no_prefix": true
+    },
+    "success_pattern": {
+      "description": "All success messages start with green ✔ followed by white 'ᴛʜàɴʜ ᴄôɴɢ'",
+      "icon": "✔",
+      "icon_color": "#99ff94",
+      "label": "ᴛʜàɴʜ ᴄôɴɢ"
+    },
+    "newline_escaping": {
+      "description": "Line breaks in messages use \\\\n (escaped newline) for multiline content",
+      "example": "line one\\nline two"
+    },
+    "exclamation_escaping": {
+      "description": "Exclamation marks are escaped with backslash in .properties format",
+      "example": "\\!"
+    },
+    "gradient_usage": {
+      "description": "Gradients are used for: errors, info brackets, headers, and decorative text",
+      "error_gradient": ["#ff7817", "#ffc46b"],
+      "info_gradient": ["#ffb469", "#ffdb9c"],
+      "notification_gradient": ["#ffbaf4", "#7dfdff"],
+      "positive_gradient": ["#adffbf", "#fff2ed"],
+      "alert_gradient": ["#29ff30", "#73fff6"],
+      "server_name_gradient": ["#b4d6d5", "#f9ecd6"]
+    },
+    "bold_usage": {
+      "description": "Bold is used sparingly, mainly in section titles within GC output",
+      "example": "<b>ᴛʀạɴɢ ᴛʜáɪ ᴡᴏʀʟᴅ</b>"
+    },
+    "strikethrough_usage": {
+      "description": "Strikethrough is used for decorative line separators",
+      "example": "<st>──────</st>"
+    }
+  },
+
+  "style_guidelines": {
+    "visual_style": "modern, icon-based, gradient-accented",
+    "overall_aesthetic": "Premium Minecraft server config with pastel color palette, Unicode small caps, and rich iconography",
+    "tone": "system/neutral with decorative flair",
+    "verbosity": "short and concise for inline messages, descriptive for notification blocks",
+    "language": "Vietnamese (ᴜɴɪᴄᴏᴅᴇ sᴍᴀʟʟ ᴄᴀᴘs)",
+    "design_principles": [
+      "Every functional category has a unique icon + color pair",
+      "Consistent prefix pattern: ICON LABEL ▪ across all modules",
+      "All body text is <white>, all separators are <dark_gray>",
+      "Error messages are clearly distinct (gradient wrap, no icon prefix)",
+      "Success messages are clearly distinct (✔ prefix, green accent)",
+      "Variable values are always highlighted in the category's accent color",
+      "Notification blocks for important events use a dedicated multiline format with gradient header",
+      "Interactive elements (hover/click) follow consistent tooltip layout"
+    ],
+    "color_palette_type": "Pastel/neon with warm accents",
+    "consistency_rules": [
+      "Each module (money, teleport, home, etc.) always uses the SAME icon and color",
+      "Error gradient is ALWAYS #ff7817 → #ffc46b",
+      "Success icon is ALWAYS ✔ with color #99ff94",
+      "Separator is ALWAYS ▪ in dark_gray",
+      "Body text is ALWAYS white",
+      "Enabled states use #99ff94, disabled states use #ff7817"
+    ]
+  }
+}
